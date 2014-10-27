@@ -1,6 +1,5 @@
 <h1> Welcome, <%= @user.name %>! </h1>
-<p class="button"><%= link_to 'Welcome Page', root_path %> 
-<%= link_to 'Back', users_path %></p>
+<p><%= link_to 'Edit Account', edit_user_path %> (Books) </p>
 <p class="user_info">
   <strong>Name:</strong>
   <%= @user.name %>
@@ -10,3 +9,5 @@
   <strong>Email:</strong>
   <%= @user.email %>
 </p>
+
+<p class="button"><%= link_to 'Welcome Page', root_path %> 
