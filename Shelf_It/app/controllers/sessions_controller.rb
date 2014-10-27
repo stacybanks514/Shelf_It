@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-skip_before_action :require_signin, only: [:new, :create]
+skip_before_action only: [:new, :create]
 
   def new #this is the sign in
     
