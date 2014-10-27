@@ -12,7 +12,7 @@ skip_before_action only: [:new, :create]
     # test if the user was found and authenticates
     if user && user.authenticate(params[:session][:password])
       sign_in(user)
-      redirect_back_or(root_path)
+      redirect_to users_path
     else
       flash[:error] = "Invalid email/password"
       redirect_to new_session_path
