@@ -23,9 +23,8 @@ ActiveRecord::Schema.define(version: 20141027154750) do
   end
 
   create_table "users", force: true do |t|
-    t.string  "name"
-    t.string  "email"
-    t.integer "book_id"
+    t.string "name"
+    t.string "email"
   end
 
 end
