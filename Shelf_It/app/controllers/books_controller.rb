@@ -15,6 +15,10 @@ class BooksController < ApplicationController
     @book = Book.new
   end
 
+  def search
+    @results = Book.search(params[:q])
+  end
+
   def edit
     @book = Book.find(params[:id])
   end
