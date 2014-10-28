@@ -1,0 +1,36 @@
+<h1> Search Results </h1>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% if @results.empty? %>
+      <td class="nobooks">No books to match your search!</td>
+    <% else %>
+    <% @results.each do |book| %>
+      <tr>
+
+        <td class="title"><%= book.title %></td>
+        <td class="author"><%= book.author %></td>
+        <td><%= link_to 'Show', book %></td>
+        <td><%= link_to 'Edit', edit_book_path(book) %></td>
+        <td class="notice"><%= link_to 'Remove', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+      </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+
+
+
+
+
+
+<%= link_to 'Back', books_path %>

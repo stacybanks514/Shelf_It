@@ -1,5 +1,3 @@
-
-
 class BooksController < ApplicationController
 
   def index
@@ -13,6 +11,15 @@ class BooksController < ApplicationController
 
   def new
     @book = Book.new
+  end
+
+  def search
+    @results = current_user.books.search(params[:q])
+  end
+  # <%= f.hidden_field :user_id, :value => current_user.id %>
+
+  def browse
+    @results = Book.search
   end
 
   def edit
@@ -37,6 +44,7 @@ class BooksController < ApplicationController
     else
       render :new
     end
+
   end
 
   def destroy
@@ -45,7 +53,6 @@ class BooksController < ApplicationController
     redirect_to books_path
     flash[:notice] = "Book removed from shelf!"
   end
-
 
   private
   # Use callbacks to share common setup or constraints between actions.

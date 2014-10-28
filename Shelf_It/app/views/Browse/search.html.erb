@@ -1,0 +1,29 @@
+<h1> Search Results </h1>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% if @results.empty? %>
+      <td class="nobooks">No books to match your search!</td>
+    <% else %>
+    <% @results.each do |book| %>
+      <tr>
+
+        <td class="title"><%= book.title %></td>
+        <td class="author"><%= book.author %></td>
+
+      </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>
+<br>
+<%= link_to 'Back to Browse', browse_index_path %>
+<br>
+<%= link_to 'Welcome Page', root_path %>
