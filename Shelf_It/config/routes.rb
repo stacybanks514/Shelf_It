@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   # get 'welcome/index'
 resources :users
+resources :books do
+    get 'search', on: :collection
+  end 
 
 resources :sessions, only: [:new, :create]
 delete '/signout', to: 'sessions#destroy'

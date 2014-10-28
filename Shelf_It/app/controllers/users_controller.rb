@@ -31,7 +31,7 @@ skip_before_action :require_signin, only: [:new, :create]
     @user = User.find(params[:id])
     if @user.update(users_params)
       redirect_to @user
-      flash[:notice] = "Updated Successfully!"
+      flash[:notice] = "Updated User Successfully!"
     else
       render :edit
     end
