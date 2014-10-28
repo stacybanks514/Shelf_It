@@ -16,7 +16,12 @@ class BooksController < ApplicationController
   end
 
   def search
-    @results = Book.search(params[:q])
+    @results = current_user.books.search(params[:q])
+  end
+  # <%= f.hidden_field :user_id, :value => current_user.id %>
+
+  def search_all_books
+    @results = Book.search
   end
 
   def edit
@@ -27,7 +32,7 @@ class BooksController < ApplicationController
     @book = Book.find(params[:id])
     if @book.update(book_params)
       redirect_to @book
-      flash[:notice] 
+      flash[:notice]
     else
       render :edit
     end
@@ -35,16 +40,16 @@ class BooksController < ApplicationController
 
   def create
     @book = Book.new(book_params)
-      if @book.save
-        redirect_to books_path
-        flash[:notice] = "Book added to shelf!"
-      else
-        render :new
-      end
-    
+    if @book.save
+      redirect_to books_path
+      flash[:notice] = "Book added to shelf!"
+    else
+      render :new
+    end
+
   end
 
-private
+  private
   # Use callbacks to share common setup or constraints between actions.
   def set_book
     @book = Book.find(params[:id])
