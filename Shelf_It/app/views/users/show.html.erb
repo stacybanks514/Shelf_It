@@ -1,5 +1,5 @@
 <h1> Welcome, <%= @user.name %>! </h1>
-<p><%= link_to 'ProfileSettings', edit_user_path %> <%= link_to 'MyShelf', books_path %>  (Browse Libraries)</p>
+<p><%= link_to 'ProfileSettings', edit_user_path %> | <%= link_to 'MyShelf', books_path %> | <%= link_to 'Browse Libraries', browse_index_path %></p>
 <p class="user_info">
   <strong>Name:</strong>
   <%= @user.name %>
@@ -9,5 +9,4 @@
   <strong>Email:</strong>
   <%= @user.email %>
 </p>
-
-<p class="button"><%= link_to 'Welcome Page', root_path %> 
+ 
