@@ -5,8 +5,5 @@
 <br>
 <%= link_to 'Log In', new_session_path %>
 <br>
-<%= form_tag(search_books_path, method: "get") do %>
-  <%= label_tag(:q, "Search other user's shelves!") %>
-  <%= text_field_tag(:q) %>
-  <%= submit_tag("Search shelves") %>
-<% end %>
+<%= link_to 'Browse Libraries', browse_index_path %>
+

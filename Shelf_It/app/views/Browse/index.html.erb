@@ -1,0 +1,9 @@
+<h1> Browse Libraries </h1>
+<p> blah </p>
+<%= form_tag(search_browse_index_path, method: "get") do %>
+  <%= label_tag(:q, "Search everyone's shelves!") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Search shelves") %>
+<% end %>
+
+<p class="button"><%= link_to 'Welcome Page', root_path %></p>

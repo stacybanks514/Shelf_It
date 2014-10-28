@@ -1,5 +1,3 @@
-
-
 class BooksController < ApplicationController
 
   def index
@@ -20,7 +18,7 @@ class BooksController < ApplicationController
   end
   # <%= f.hidden_field :user_id, :value => current_user.id %>
 
-  def search_all_books
+  def browse
     @results = Book.search
   end
 

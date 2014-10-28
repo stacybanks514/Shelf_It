@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   # get 'welcome/index'
 resources :users
+resources :browse do
+    get 'search', on: :collection
+  end 
 resources :books do
     get 'search', on: :collection
   end 

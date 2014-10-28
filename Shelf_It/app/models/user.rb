@@ -1,4 +1,4 @@
-class User <ActiveRecord::Base
+class User < ActiveRecord::Base
   has_many :books
   #Add save handlers for formatting data
   before_create :create_remember_token
