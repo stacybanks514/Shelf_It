@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
   def index
-    @books = Book.all
+    @books = Book.most_recent
   end
 
   def show
