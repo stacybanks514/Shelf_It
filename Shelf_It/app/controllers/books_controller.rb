@@ -23,7 +23,7 @@ class BooksController < ApplicationController
     @book = Book.find(params[:id])
     if @book.update(book_params)
       redirect_to @book
-      flash[:notice] 
+      flash[:notice]
     else
       render :edit
     end
@@ -31,16 +31,23 @@ class BooksController < ApplicationController
 
   def create
     @book = Book.new(book_params)
-      if @book.save
-        redirect_to books_path
-        flash[:notice] = "Book added to shelf!"
-      else
-        render :new
-      end
-    
+    if @book.save
+      redirect_to books_path
+      flash[:notice] = "Book added to shelf!"
+    else
+      render :new
+    end
   end
 
-private
+  def destroy
+    @book = Book.find(params[:id])
+    @book.destroy
+    redirect_to books_path
+    flash[:notice] = "Book removed from shelf!"
+  end
+
+
+  private
   # Use callbacks to share common setup or constraints between actions.
   def set_book
     @book = Book.find(params[:id])
