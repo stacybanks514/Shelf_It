@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   # get 'welcome/index'
 resources :users
-resources :books
+resources :books do
+    get 'search', on: :collection
+  end 
+
 resources :sessions, only: [:new, :create]
 delete '/signout', to: 'sessions#destroy'
   # The priority is based upon order of creation: first created -> highest priority.
