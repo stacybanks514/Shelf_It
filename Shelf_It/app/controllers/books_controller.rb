@@ -1,6 +1,10 @@
+
+
 class BooksController < ApplicationController
+
   def index
-    @books = Book.most_recent
+    # @books = Book.most_recent
+    @books = current_user.books
   end
 
   def show
@@ -27,7 +31,6 @@ class BooksController < ApplicationController
 
   def create
     @book = Book.new(book_params)
-
       if @book.save
         redirect_to books_path
         flash[:notice] = "Book added to shelf!"
@@ -45,7 +48,7 @@ private
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def book_params
-    params.require(:book).permit(:title, :author)
+    params.require(:book).permit(:title, :author, :user_id)
   end
 
-end #end class
+end #end class BooksController
