@@ -11,8 +11,11 @@ class BrowseController < ApplicationController
     # @browse_search = Book.all
     # @browse_search.search(params[:q])
     books = Book.all
+    # user = Book.user_id.find()
+    # @user_name = @book.user_id.name
     @results = books.search(params[:q])
   end
+
   private
   # Use callbacks to share common setup or constraints between actions.
   def set_book

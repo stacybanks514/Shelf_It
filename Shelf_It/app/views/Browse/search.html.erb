@@ -4,6 +4,7 @@
     <tr>
       <th>Title</th>
       <th>Author</th>
+      <th>Owner</th>
       <th colspan="2"></th>
     </tr>
   </thead>
@@ -17,6 +18,7 @@
 
         <td class="title"><%= book.title %></td>
         <td class="author"><%= book.author %></td>
+        <td class="owner"><%= book.user.name %></td>
 
       </tr>
       <% end %>
