@@ -1,6 +1,7 @@
 class BrowseController < ApplicationController
   def index
     @books = Book.all
+    @display_books = Book.all
   end
 
   def show
@@ -8,11 +9,8 @@ class BrowseController < ApplicationController
   end
 
   def search
-    # @browse_search = Book.all
-    # @browse_search.search(params[:q])
+    
     books = Book.all
-    # user = Book.user_id.find()
-    # @user_name = @book.user_id.name
     @results = books.search(params[:q])
   end
 
