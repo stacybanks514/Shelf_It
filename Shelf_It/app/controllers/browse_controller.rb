@@ -1,6 +1,7 @@
 class BrowseController < ApplicationController
   def index
     @books = Book.all
+    @display_books = Book.all
   end
 
   def show
@@ -8,11 +9,11 @@ class BrowseController < ApplicationController
   end
 
   def search
-    # @browse_search = Book.all
-    # @browse_search.search(params[:q])
+    
     books = Book.all
     @results = books.search(params[:q])
   end
+
   private
   # Use callbacks to share common setup or constraints between actions.
   def set_book
