@@ -54,6 +54,7 @@ class BooksController < ApplicationController
     flash[:notice] = "Book removed from shelf!"
   end
 
+########################################################################
   private
   # Use callbacks to share common setup or constraints between actions.
   def set_book
@@ -65,4 +66,18 @@ class BooksController < ApplicationController
     params.require(:book).permit(:title, :author, :user_id)
   end
 
+  def get_book_cover(title)
+    title = title.gsub(" ", "+")
+    @image = HTTParty.get("https://www.goodreads.com/search.xml?key=lZx6I0xHirEZVRs8Xg2iPg&q=#{answer}")    
+  end
+########################################################################
 end #end class BooksController
+# puts "What's the title?"
+# answer = gets.chomp
+
+# def stuff(url)
+#   results = HTTParty.get(url)
+#   better_results = results["GoodreadsResponse"]["search"]["results"]["work"][0]["best_book"]["image_url"]
+# end
+
+# puts stuff("https://www.goodreads.com/search.xml?key=lZx6I0xHirEZVRs8Xg2iPg&q=#{answer}")
