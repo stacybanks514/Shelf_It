@@ -1,8 +1,10 @@
 source 'https://rubygems.org'
+ruby '2.1.2'
 group :test do
   gem 'capybara'
   gem 'rspec-rails'
 end
+gem 'rails_12factor', group: :production 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
 # Use postgresql as the database for Active Record
@@ -44,3 +46,4 @@ group :development, :test do
   gem "pry-rails"
 end
 
+gem 'foundation-rails'

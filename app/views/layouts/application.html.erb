@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= content_for?(:title) ? yield(:title) : "Shelf It!" %></title>
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    
+    <div class="row">
+      <div class="large-12 columns">
+        <nav class="top-bar" data-topbar>
+          <ul class="title-area">
+            
+            <li class="name">
+              <h1>
+              <a href><%= link_to 'Shelf It!', root_path %>
+              </a>
+              </h1>
+            </li>
+            <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
+          </ul>
+          
+          <section class="top-bar-section">
+            <ul class="login">
+              <% flash.each do |name, msg| %>
+              <%= content_tag :div, msg, class: name %>
+              <% end %>
+              <%= render 'common/signout' %>
+            </ul>
+            
+            <ul class="right">
+              <li class="search">
+              </li>
+              
+              <li class="has-button">
+               
+              </li>
+            </ul>
+          </section>
+        </nav>
+        
+        
+        
+      </div>
+    </div>
+    
+    
+    <%= yield %>
+    <%= javascript_include_tag "application" %>
+  </body>
+</html>
