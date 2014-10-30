@@ -23,7 +23,7 @@ https://github.com/stacybanks514/Shelf_It/blob/master/Shelf_It_ERD.jpeg <br>
 
 
 ### Wireframe/Flowchart <br>
-http://www.gliffy.com/go/publish/image/6399994/L.png
+https://github.com/stacybanks514/Shelf_It/blob/master/Shelf_It_Flowchart.png
 
 ### Technologies <br>
 * Ruby 2.1.2
