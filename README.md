@@ -1,5 +1,5 @@
 Shelf It
-========
+***
 WDI - Project 1 - 10/31/14
 
 ### Overview <br>
@@ -17,7 +17,7 @@ The personal library specifically made for physical books you have at home. Simp
 * User can browse through all books in the database.
 * User can search for a specific book by title or author and see who own that book. 
 
-========
+***
 ### ERD <br>
 https://github.com/stacybanks514/Shelf_It/blob/master/Shelf_It_ERD.jpeg <br>
 
