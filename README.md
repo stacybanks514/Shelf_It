@@ -1,6 +1,6 @@
 # Shelf It
 WDI - Project 1 - 10/31/14
-***
+
 ### Overview <br>
 Do you go to the book store and forget what books you have at home? Forget no more! 
 
