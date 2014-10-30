@@ -1,9 +1,8 @@
 Shelf It
 ========
-WDI - Project 1
-10/31/14
-========
-Overview
+WDI - Project 1 - 10/31/14
+
+Overview <br>
 Do you go to the book store and forget what books you have at home? Forget no more! 
 
 Welcome to Shelf It!
@@ -19,13 +18,13 @@ User Stories
 * User can search for a specific book by title or author and see who own that book. 
 
 ========
-ERD
+ERD <br>
 https://www.lucidchart.com/invitations/accept/38060ead-8f6c-4063-b3f3-7eb3e3c77d59
 
-Wireframe/Flowchart
+Wireframe/Flowchart <br>
 http://www.gliffy.com/go/publish/image/6399994/L.png
 
-Technologies 
+Technologies <br>
 * Ruby 2.1.2
 * Rails 4.1.6
 * PostgreSQL Database
