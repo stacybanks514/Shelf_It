@@ -71,11 +71,23 @@ class BooksController < ApplicationController
     params.require(:book).permit(:title, :author, :user_id)
   end
 
-  # def cover(title)
-  #   title = title.gsub(" ", "+")
-  #   @xml = HTTParty.get("https://www.goodreads.com/search.xml?key=lZx6I0xHirEZVRs8Xg2iPg&q=#{title}")
-  #   @xml["GoodreadsResponse"]["Request"][:search]["query"][:results]["work"][0][:image_url]
-  # end
+  def book_cover(book)  
+    missing_cover_url = 'missing_cover.png'
+    safe_title = URI::encode(book.title)
+    my_key = "cNBDtmZ5jlPz6XB4bRy6A"
+    book_url = "https://www.goodreads.com/search.xml?key=#{my_key}&q=#{safe_title}"
+
+    search_results = HTTParty.get(book_url)
+
+    begin
+      book_data = search_results["GoodreadsResponse"]["search"]["results"]["work"][0]["best_book"]
+      book_data.fetch("image_url", missing_cover_url)
+    rescue NoMethodError # missing hash key
+      missing_cover_url
+    end
+  end
+
+  helper_method :book_cover
  
 ########################################################################
 end #end class BooksController
