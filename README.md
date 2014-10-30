@@ -4,7 +4,8 @@ WDI 3 DC - Project 1 - 10/31/14
 ### Overview <br>
 Do you go to the book store and forget what books you have at home? Forget no more! 
 
-Welcome to Shelf It!
+Welcome to Shelf It! <br>
+https://murmuring-escarpment-3877.herokuapp.com/
 
 The personal library specifically made for physical books you have at home. Simply log into your personal shelf, add all your books you have at home, and never buy duplicate books when you go to your favorite book store!
 
