@@ -20,11 +20,9 @@ User Stories
 
 ========
 ERD
-Shelf_It_ERD.jpeg
 https://www.lucidchart.com/invitations/accept/38060ead-8f6c-4063-b3f3-7eb3e3c77d59
 
 Wireframe/Flowchart
-Shelf_It_Flowchart.png
 http://www.gliffy.com/go/publish/image/6399994/L.png
 
 Technologies 
