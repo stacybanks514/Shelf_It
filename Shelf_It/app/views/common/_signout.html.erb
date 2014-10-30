@@ -1,6 +1,6 @@
 <% if signed_in? %>
   <%= form_for :session, url: signout_path, method: 'delete' do |f| %>
-    Signed In as <%= link_to current_user.name, current_user %>
+    Signed In as <%= link_to current_user.name, current_user %>, <%= link_to 'View My Shelf', books_path %>
   <%= f.submit 'Sign Out', id: 'signout' %>
   <% end %>
 <% else %>
