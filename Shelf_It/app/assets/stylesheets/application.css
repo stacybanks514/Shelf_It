@@ -12,4 +12,14 @@
  *
  *= require_tree .
  *= require_self
+ *= require foundation_and_overrides
+
  */
+
+.login {
+  color: white;
+}
+
+#large_button_expand {
+  color: white;
+}
