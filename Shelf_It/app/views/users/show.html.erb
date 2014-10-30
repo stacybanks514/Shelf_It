@@ -1,12 +1,58 @@
-<h1> Welcome, <%= @user.name %>! </h1>
-<p><%= link_to 'ProfileSettings', edit_user_path %> | <%= link_to 'MyShelf', books_path %> | <%= link_to 'Browse Libraries', browse_index_path %></p>
-<p class="user_info">
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
-
-<p class="user_info">
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
- 
+<div class="row">
+  <div class="large-12 columns">
+    <div class="row">
+      
+      
+      
+      <div class="large-4 small-12 columns">
+        
+        <img src="http://www.imran.com/xyper_images/icon-user-default.png">
+        
+        <div class="hide-for-small panel">
+          <h3><%= @user.name %></h3>
+          <h5 class="subheader">
+          </h5>
+          <p class="enlarge_text"><%= link_to 'ProfileSettings', edit_user_path %></p>
+          <p class="enlarge_text"><%= link_to 'Browse Libraries', browse_index_path %></p>
+        </div>
+        
+      </div>
+      
+      
+      <div class="large-8 columns">
+        <div class="row">
+          <h1> Welcome, <%= @user.name %>! </h1>
+          <p class="user_info">
+          <strong>Name:</strong>
+          <%= @user.name %>
+          </p>
+          <p class="user_info">
+          <strong>Email:</strong>
+          <%= @user.email %>
+          </p>
+          <br>
+          <p class="user_info">
+          <%= link_to 'View My Shelf', books_path %>
+          </p>
+          
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+<footer class="row">
+  <div class="large-12 columns"><hr/>
+    <div class="row">
+      
+      <div class="large-6 columns">
+        <p>© Copyright no one at all. Go to town.</p>
+      </div>
+      
+      
+      
+    </div>
+  </div>
+</footer>
+</div>
+</div>
