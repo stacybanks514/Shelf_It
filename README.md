@@ -19,7 +19,8 @@ The personal library specifically made for physical books you have at home. Simp
 
 ========
 ### ERD <br>
-https://www.lucidchart.com/invitations/accept/38060ead-8f6c-4063-b3f3-7eb3e3c77d59
+https://github.com/stacybanks514/Shelf_It/blob/master/Shelf_It_ERD.jpeg <br>
+
 
 ### Wireframe/Flowchart <br>
 http://www.gliffy.com/go/publish/image/6399994/L.png
