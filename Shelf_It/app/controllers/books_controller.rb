@@ -1,8 +1,13 @@
+
 class BooksController < ApplicationController
 
   def index
     # @books = Book.most_recent
     @books = current_user.books
+    # @books.each do |book|
+    #   cover(book.title)
+    # end
+    # get_book_cover(params[:title])
   end
 
   def show
@@ -66,12 +71,15 @@ class BooksController < ApplicationController
     params.require(:book).permit(:title, :author, :user_id)
   end
 
-  def get_book_cover(title)
-    title = title.gsub(" ", "+")
-    @image = HTTParty.get("https://www.goodreads.com/search.xml?key=lZx6I0xHirEZVRs8Xg2iPg&q=#{answer}")    
-  end
+  # def cover(title)
+  #   title = title.gsub(" ", "+")
+  #   @xml = HTTParty.get("https://www.goodreads.com/search.xml?key=lZx6I0xHirEZVRs8Xg2iPg&q=#{title}")
+  #   @xml["GoodreadsResponse"]["Request"][:search]["query"][:results]["work"][0][:image_url]
+  # end
+ 
 ########################################################################
 end #end class BooksController
+
 # puts "What's the title?"
 # answer = gets.chomp
 
@@ -81,3 +89,13 @@ end #end class BooksController
 # end
 
 # puts stuff("https://www.goodreads.com/search.xml?key=lZx6I0xHirEZVRs8Xg2iPg&q=#{answer}")
+
+
+# Randy's code:
+# def get_game_data(title)
+#       title = title.gsub(" ", "+")
+#       @game = HTTParty.get("http://www.giantbomb.com/api/search/?api_key=#{ENV['giant_bomb_api_key']}&format=json&query=#{title}&resources=game&limit=1")
+#       @deck = @game["results"][0]["deck"]
+#       @image = @game["results"][0]["image"]["super_url"]
+#       @title = title
+# end
