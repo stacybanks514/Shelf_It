@@ -26,6 +26,7 @@
           <table>
             <thead>
               <tr>
+                <th>cover</th>
                 <th>Title</th>
                 <th>Author</th>
                  <th>Owner</th>
@@ -38,6 +39,7 @@
               <% else %>
               <% @results.each do |book| %>
               <tr>
+                <td class="cover"><%= image_tag book.book_cover_url, alt: book.title %></td>
                 <td class="title"><%= book.title %></td>
                 <td class="author"><%= book.author %></td>
                 <td class="owner"><%= book.user.name %></td>
