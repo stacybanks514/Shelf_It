@@ -1,8 +1,13 @@
+
 class BooksController < ApplicationController
 
   def index
     # @books = Book.most_recent
     @books = current_user.books
+    # @books.each do |book|
+    #   cover(book.title)
+    # end
+    # get_book_cover(params[:title])
   end
 
   def show
@@ -54,6 +59,7 @@ class BooksController < ApplicationController
     flash[:notice] = "Book removed from shelf!"
   end
 
+########################################################################
   private
   # Use callbacks to share common setup or constraints between actions.
   def set_book
@@ -66,3 +72,4 @@ class BooksController < ApplicationController
   end
 
 end #end class BooksController
+
