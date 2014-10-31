@@ -26,6 +26,7 @@ https://github.com/stacybanks514/Shelf_It/blob/master/Shelf_It_ERD.jpeg <br>
 https://github.com/stacybanks514/Shelf_It/blob/master/Shelf_It_Flowchart.png
 
 ### Technologies <br>
+* Goodreads API
 * Ruby 2.1.2
 * Rails 4.1.6
 * PostgreSQL Database
@@ -33,3 +34,5 @@ https://github.com/stacybanks514/Shelf_It/blob/master/Shelf_It_Flowchart.png
 * rails_12factor
 * capybara
 * foundation-rails 5
+* figaro
+
