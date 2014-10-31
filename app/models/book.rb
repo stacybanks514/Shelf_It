@@ -15,20 +15,21 @@ class Book < ActiveRecord::Base
 
   def get_book_cover_url(title)
     missing_cover_url = 'missing_cover.png'
-    safe_title = URI::encode(title)
-    my_key = ENV["goodreads_api"]
-    book_url = "https://www.goodreads.com/search.xml?key=#{my_key}&q=#{safe_title}"
-
-    search_results = HTTParty.get(book_url)
-
     begin
+      safe_title = URI::encode(title)
+      my_key = ENV["goodreads_api"]
+      book_url = "https://www.goodreads.com/search.xml?key=#{my_key}&q=#{safe_title}"
+
+      search_results = HTTParty.get(book_url)
+
       book_data = search_results["GoodreadsResponse"]["search"]["results"]["work"][0]["best_book"]
       book_data.fetch("image_url", missing_cover_url)
-    rescue NoMethodError # missing hash key
+    rescue NoMethodError => err # missing hash key
+      Rails.logger.error err
       missing_cover_url
     end
   end
- 
+
 
   # def review
   #   title = self.title.to_s.gsub(" ", "+")
