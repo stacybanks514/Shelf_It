@@ -7,7 +7,7 @@ Do you go to the book store and forget what books you have at home? Forget no mo
 Welcome to Shelf It! <br>
 https://murmuring-escarpment-3877.herokuapp.com/
 
-The personal library specifically made for physical books you have at home. Simply log into your personal shelf, add all your books you have at home, and never buy duplicate books when you go to your favorite book store!
+The personal library web app specifically made for physical books you have at home. Simply log in to view your personal profile and add all your books you have at home. Now that you have a way of checking which books you have, you never have to worry about buying duplicate books when you go to your favorite book store!
 
 
 ### User Stories
