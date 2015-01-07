@@ -35,3 +35,27 @@
 .super_enlarge_text {
   font-size: 25pt;
 }
+
+.shelf-it-pic {
+  height: auto;
+  width: 100%;
+  width: auto\9;
+}
+
+.intro {
+  background-color: red;
+  width: 100%;
+  height: 600px;
+}
+
+.bubbles {
+  background-color: blue;
+  width: 100%;
+  height: 400px;
+}
+
+.about {
+  background-color: green;
+  width: 100%;
+  height: 400px;
+}
