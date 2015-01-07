@@ -1,23 +1,17 @@
 <div class="row">
   <div class="large-12 columns">
     <div class="row">
-      
       <div class="large-4 small-12 columns">
-       
-        
         <div class="hide-for-small panel">
-         
           <%= form_tag(search_browse_index_path, method: "get") do %>
-          <%= label_tag(:q, "Search everyone's shelves!") %>
+          <%= label_tag(:q, "Search Everyone's Shelves!") %>
           <%= text_field_tag(:q) %>
-          <%= submit_tag("Search shelves") %>
+          <%= submit_tag("Search Shelves") %>
           <% end %>
           <br>
           <p class="enlarge_text"><%= link_to 'Welcome Page', root_path %></p>
         </div>
-        
       </div>
-      
       
       <div class="large-8 columns">
         <div class="row">
@@ -35,35 +29,27 @@
               <% if @books.empty? %>
               <td class="nobooks">There's nothing on this shelf!</td>
               <% else %>
-              <% @books.each do |book| %>
-              <tr>
-                <td class="cover"><%= image_tag book.book_cover_url, alt: book.title %></td>
-                <td class="title"><%= book.title %></td>
-                <td class="author"><%= book.author %></td>
-                
-              </tr>
-              <% end %>
+                <% @books.each do |book| %>
+                  <tr>
+                    <td class="cover"><%= image_tag book.book_cover_url, alt: book.title %></td>
+                    <td id="title"><%= book.title %></td>
+                    <td class="author"><%= book.author %></td>
+                  </tr>
+                <% end %>
               <% end %>
             </tbody>
           </table>
-          
-          
         </div>
       </div>
-      
     </div>
   </div>
 </div>
 <footer class="row">
   <div class="large-12 columns"><hr/>
     <div class="row">
-      
       <div class="large-6 columns">
-        <p>© Copyrights are all mine.</p>
-      </div>
-      
-      
-      
+        <p>© Copyright to Stacy Banks</p>
+      </div> 
     </div>
   </div>
 </footer>
