@@ -180,7 +180,9 @@
 
 .browse-title {
   color: white;
+  font-family: 'Comfortaa', cursive;
 }
+
 
 @media (max-width: 1030px) {
   img {

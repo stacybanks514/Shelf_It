@@ -2,29 +2,23 @@
   <div class="large-12 columns">
     <div class="browse">
       <div class="row">
-        <div class="large-4 small-12 columns">
+        <div class="large-4 medium-4 small-12 columns">
           <h3 class="browse-title">Browse all shelves </h3>
-          <div class="hide-for-small panel">
             <%= form_tag(search_browse_index_path, method: "get") do %>
-            <%= label_tag(:q, "Search Everyone's Shelves!") %>
             <%= text_field_tag(:q) %>
-            <%= submit_tag("Search Shelves") %>
+            <button class="button expand"><%= submit_tag("Search Shelves") %></button>
             <% end %>
-            <br>
-            <p class="enlarge_text"><%= link_to 'Welcome Page', root_path %></p>
-          </div>
-        </div>
-        
-        <div class="large-8 columns">
+            <%= link_to 'Welcome Page', root_path, class: "button expand" %>
+        </div> <!-- end large 4 -->
+        <div class="large-8 medium-8 small-12 columns">
           <div class="row">
-            <h3 class="browse-title"> All Books Within Shelf It</h3>
+            <h3 class="browse-title"> All Books Within <span class="purple">Shelf It</span></h3>
             <table>
               <thead>
                 <tr>
                   <th>Cover</th>
                   <th>Title</th>
                   <th>Author</th>
-                  <th colspan="2"></th>
                 </tr>
               </thead>
               <tbody>

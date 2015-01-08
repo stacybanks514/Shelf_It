@@ -1,4 +1,3 @@
-
 class Book < ActiveRecord::Base
   belongs_to :user
   scope :most_recent, -> { limit(10).order('author desc') }
