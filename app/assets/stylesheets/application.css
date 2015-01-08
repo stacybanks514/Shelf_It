@@ -62,14 +62,14 @@
   text-align: center;
   padding-top: 180px;
   font-size: 120px;
-  font-family: 'Poiret One', cursive;
+  font-family: 'Poiret One', 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
 }
 .intro h3 {
   color: white;
   text-align: center;
   padding-top: 10px;
   font-size: 50px;
-  font-family: 'Poiret One', cursive;
+  font-family: 'Poiret One', 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
 }
 
 .purple {
@@ -87,7 +87,7 @@
 .bubble-text {
   text-align: center;
   color: #0DAA99;
-  font-family: 'Comfortaa', cursive;
+  font-family: 'Comfortaa', Trebuchet MS;
 }
 
 .about {
@@ -110,7 +110,7 @@
 .about p{
   color: black;
   padding: 20px;
-  font-family: 'Comfortaa', cursive;
+  font-family: 'Comfortaa', Trebuchet MS;
   text-align: center;
   font-size: 20px;
 }
@@ -133,12 +133,12 @@
 
 .fill-in-form h1 {
   color: #0DAA99;
-  font-family: 'Comfortaa', cursive;
+  font-family: 'Comfortaa', Trebuchet MS;
 }
 
 .fill-in-form h3 {
   color: black;
-  font-family: 'Comfortaa', cursive;
+  font-family: 'Comfortaa', Trebuchet MS;
 }
 .fill-in-form {
   text-align: center;
@@ -159,7 +159,7 @@
 }
 
 #profile-h3 {
-  font-family: 'Comfortaa', cursive;
+  font-family: 'Comfortaa', Trebuchet MS;
   color:#0DAA99;
   text-align: center;
   font-size: 40px;
@@ -185,7 +185,7 @@
 
 .browse-title {
   color: white;
-  font-family: 'Comfortaa', cursive;
+  font-family: 'Comfortaa', Trebuchet MS;
 }
 
 
