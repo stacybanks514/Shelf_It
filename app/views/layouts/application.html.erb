@@ -4,6 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%= content_for?(:title) ? yield(:title) : "Shelf It!" %></title>
+    <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
@@ -13,7 +15,7 @@
     <nav class="top-bar" data-topbar role="navigation" data-options="sticky_on: large">
       <ul class="title-area">
         <li class="name">
-          <h1><a href><%= link_to 'Shelf It', root_path %></a></h1>
+          <h1><a href id="home-button"><%= link_to 'Shelf It', root_path%></a></h1>
         </li>
          <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
         <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
@@ -22,11 +24,9 @@
         <!-- Right Nav Section -->
         <ul class="right">
           <ul class="login">
-              <% flash.each do |name, msg| %>
-              <li><%= content_tag :div, msg, class: name %></li>
-              <% end %>
-              <li><%= render 'common/signout' %></li>
-            </ul>
+
+              <%= render 'common/signout' %>
+          </ul>
         </ul>
       </section>
     </nav>

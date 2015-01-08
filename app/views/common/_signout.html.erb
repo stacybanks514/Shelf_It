@@ -1,12 +1,11 @@
 <% if signed_in? %>
-  <%= form_for :session, url: signout_path, method: 'delete' do |f| %>
-    Signed In as <%= link_to current_user.name, current_user %>, <%= link_to 'View My Shelf', books_path %>
-  <%= f.submit 'Sign Out', id: 'signout' %>
+  <li>
+    <%= form_for :session, url: signout_path, method: 'delete' do |f| %>
+      Signed In as <%= link_to current_user.name, current_user %>, <%= link_to 'View My Shelf', books_path %>
+    <%= f.submit 'Sign Out', id: 'signout' %>
+    <% end %>
+  </li>
+  <% else %>
+     <li class="active"> <%= link_to 'Log In', new_session_path %></li> 
+     <li> <%= link_to "Sign Up", new_user_path %></li>
   <% end %>
-<% else %>
- 
-   <li class="active"> <%= link_to 'Log In', new_session_path %></li> 
-   <li> <%= link_to "Sign Up", new_user_path %></li>
-
-<% end %>
-
