@@ -11,13 +11,16 @@
   <div class="large-12 columns">
     <div class="row">
       <div class="large-4 medium-4 small-12 columns">
-        <img class="bubbles" src="bookshelves.jpg"/>
+        <img class="bubbles" src="http://i.imgur.com/yx63i5O.jpg"/>
+        <h3 class="bubble-text">Never forget what books you have at home</h3>
       </div>
       <div class="large-4 medium-4 small-12 columns">
-        <img class="bubbles" src="https://d.gr-assets.com/books/1362064564l/9627755.jpg"/>
+        <img class="bubbles" src="http://i.imgur.com/S9V4ZjU.jpg"/>
+        <h3 class="bubble-text">Log in and build your personal shelf</h3>
       </div>
       <div class="large-4 medium-4 small-12 columns">
-        <img class="bubbles" src="https://d.gr-assets.com/books/1404632076l/18775247.jpg"/>
+        <img class="bubbles" src="http://i.imgur.com/maNiOIb.jpg"/>
+        <h3 class="bubble-text">View your shelf on your phone</h3>
       </div>
     </div>  <!-- end row div -->
   </div>  <!-- end large-12 columns -->
@@ -28,10 +31,10 @@
   <div class="row">
     <div class="large-12 columns">
         <hr/>
-        <p>Never forget a book again! Sometimes when you go to your favorite book store, you forget what books you have at home. You try to remember but you just can't and you end up buying duplicates! <br>
-        But have no fear, Shelf it is here to the rescue! Shelf it make it easy to log the physical books you have at home, making your library accessible from anywhere! Simply sign up or log in to see your profile and your shelf. To add a book, just click 'Add a book' link, fill in the book's author and title, press submit, and Shelf It goes to work! We go to the Goodreads library and find your book. Once we've found it we add it to your shelf along with the book's cover!</p>
-      <%= link_to "Browse Libraries", browse_index_path %></p>
-      <a id="goodreads" href="https://www.goodreads.com/">Find more books on Goodreads!</a>
+        <p>Shelf It makes it easy to log the physical books you have at home, making your personal library accessible from anywhere! Simply sign up or log in to see your profile and your shelf. To add a book, just click 'Add a book' link, fill in the book's author and title, press submit, and Shelf It goes to work! We go to the Goodreads library and find your book. Once we've found it we add it to your shelf along with the book's cover!</p>
+      <a href><%= link_to "Curious about other shelves? Browse all shelves!", browse_index_path, class: "button expand" %>
+      <a id="goodreads" href="https://www.goodreads.com/" class="button expand">Find more books on Goodreads!</a>
+      <!-- <a id="goodreads" href="https://www.goodreads.com/">Find more books on Goodreads!</a> -->
     </div>
   </div>
 
