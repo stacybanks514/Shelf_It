@@ -1,38 +1,18 @@
-<div class="row">
+<div id="browse-bg">
   <div class="large-12 columns">
     <div class="row">
-      
-      
-      
       <div class="large-4 small-12 columns">
-        
-        <img src="http://www.imran.com/xyper_images/icon-user-default.png">
-        
-        <div class="hide-for-small panel">
-          
-          <h5 class="subheader">
-          </h5>
-          <%= link_to 'Add A Book', new_book_path %>
-          <br>
-          <%= link_to 'Browse Libraries', browse_index_path %>
-          <br>
-          <%= form_tag(search_books_path, method: "get") do %>
+        <img src="http://www.imran.com/xyper_images/icon-user-default.png" class="profile">
+        <hr>
+        <%= link_to 'Add A Book', new_book_path, class: "button expand"  %>
+        <%= link_to 'Browse Libraries', browse_index_path, class: "button expand"  %>
+        <%= form_tag(search_books_path, method: "get") do %>
           <%= label_tag(:q, "Search your shelf:") %>
           <%= text_field_tag(:q) %>
           <%= submit_tag("Search") %>
-          <% end %>
-           <br>
-          <%= link_to 'Welcome Page', root_path %>
-        </div>
-        
+        <% end %> 
       </div>
-      
-      
-      
-      
-      
-      
-      <div class="large-8 columns">
+    <div class="large-8 small-12 columns" id="profile-shelf">
         <div class="row">
           <h3>My Shelf!</h3>
           <table>
@@ -41,7 +21,6 @@
                 <th>Cover</th>
                 <th>Title</th>
                 <th>Author</th>
-                <th colspan="3"></th>
               </tr>
             </thead>
             <tbody>
@@ -61,33 +40,8 @@
               <% end %>
             </tbody>
           </table>
-          
-          
         </div>
       </div>
-      
     </div>
   </div>
-</div>
-
-
-
-
-<footer class="row">
-  <div class="large-12 columns"><hr/>
-    <div class="row">
-      
-      <div class="large-6 columns">
-        <p>© Copyright no one at all. Go to town.</p>
-      </div>
-      
-      
-      
-    </div>
-  </div>
-</footer>
-
-
-
-</div>
 </div>

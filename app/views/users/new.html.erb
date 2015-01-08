@@ -1,26 +1,30 @@
-<h1> Create a new user </h1>
+<div class="large-12 columns">
+  <div class="fill-in-form">
+    <h1>Sign up for <span class="purple">Shelf It</span> </h1>
+    <h3>Your library away from home</h3>
+    <% if @user.errors.any? %>
+      <b> Errors:</b>
+      <ul>
+          <% @user.errors.full_messages.each do |msg| %>
+          <li><%= msg %> </li>
+          <% end %>
+      </ul>
+      <% end %> 
 
-<% if @user.errors.any? %>
-<b> Errors:</b>
-<ul>
-    <% @user.errors.full_messages.each do |msg| %>
-    <li><%= msg %> </li>
+      <%= form_for @user do |f| %>
+         <%= f.label :name %>
+         <%= f.text_field :name %>
+
+         <%= f.label :email %>
+         <%= f.text_field :email %>
+
+         <%= f.label :password %>
+         <%= f.password_field :password %>
+
+         <%= f.label :password_confirmation, 'Confirm Password' %>
+         <%= f.password_field :password_confirmation %>
+
+       <%= f.submit 'Submit', id: 'submit', class: "button" %>
     <% end %>
-</ul>
-<% end %> 
-
-<%= form_for @user do |f| %>
-   <%= f.label :name %>
-   <%= f.text_field :name %>
-
-   <%= f.label :email %>
-   <%= f.text_field :email %>
-
-   <%= f.label :password %>
-   <%= f.password_field :password %>
-
-   <%= f.label :password_confirmation, 'Confirm Password' %>
-   <%= f.password_field :password_confirmation %>
-
-   <%= f.submit 'Submit', id: 'submit' %>
-  <% end %>
+  </div>
+</div>

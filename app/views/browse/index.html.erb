@@ -1,49 +1,48 @@
-<div class="row">
+<div id="browse-bg">
   <div class="large-12 columns">
-    <div class="row">
-      <div class="large-4 small-12 columns">
-        <div class="hide-for-small panel">
-          <%= form_tag(search_browse_index_path, method: "get") do %>
-          <%= label_tag(:q, "Search Everyone's Shelves!") %>
-          <%= text_field_tag(:q) %>
-          <%= submit_tag("Search Shelves") %>
-          <% end %>
-          <br>
-          <p class="enlarge_text"><%= link_to 'Welcome Page', root_path %></p>
-        </div>
-      </div>
-      
-      <div class="large-8 columns">
-        <div class="row">
-          <h1> All Books </h1>
-          <table>
-            <thead>
-              <tr>
-                <th>Cover</th>
-                <th>Title</th>
-                <th>Author</th>
-                <th colspan="2"></th>
-              </tr>
-            </thead>
-            <tbody>
-              <% if @books.empty? %>
-              <td class="nobooks">There's nothing on this shelf!</td>
-              <% else %>
-                <% @books.each do |book| %>
-                  <tr>
-                    <td class="cover"><%= image_tag book.book_cover_url, alt: book.title %></td>
-                    <td id="title"><%= book.title %></td>
-                    <td class="author"><%= book.author %></td>
-                  </tr>
+    <div class="browse">
+      <div class="row">
+        <div class="large-4 medium-4 small-12 columns">
+          <h3 class="browse-title">Browse all shelves </h3>
+            <%= form_tag(search_browse_index_path, method: "get") do %>
+            <%= text_field_tag(:q) %>
+            <button class="button expand"><%= submit_tag("Search Shelves") %></button>
+            <% end %>
+            <%= link_to 'Welcome Page', root_path, class: "button expand" %>
+        </div> <!-- end large 4 -->
+        <div class="large-8 medium-8 small-12 columns">
+          <div class="row">
+            <h3 class="browse-title"> All Books Within <span class="purple">Shelf It</span></h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>Cover</th>
+                  <th>Title</th>
+                  <th>Author</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% if @books.empty? %>
+                <td class="nobooks">There's nothing on this shelf!</td>
+                <% else %>
+                  <% @books.each do |book| %>
+                    <tr>
+                      <td class="cover"><%= image_tag book.book_cover_url, alt: book.title %></td>
+                      <td id="title"><%= book.title %></td>
+                      <td class="author"><%= book.author %></td>
+                    </tr>
+                  <% end %>
                 <% end %>
-              <% end %>
-            </tbody>
-          </table>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+
 <footer class="row">
   <div class="large-12 columns"><hr/>
     <div class="row">
