@@ -42,11 +42,6 @@
   width: auto\9;
 }
 
-.home {
-  /*font-family: 'Poiret One', cursive;*/
-  color: purple;
-}
-
 .intro {
   background: rgba(8,168,150,1);
   background: -moz-linear-gradient(top, rgba(8,168,150,1) 0%, rgba(255,255,255,0.89) 100%);
@@ -136,12 +131,12 @@
   margin: 0 auto;
 }
 
-.signup h1 {
-  color: white;
+.fill-in-form h1 {
+  color: #0DAA99;
   font-family: 'Comfortaa', cursive;
 }
 
-.signup h3 {
+.fill-in-form h3 {
   color: black;
   font-family: 'Comfortaa', cursive;
 }
@@ -149,6 +144,42 @@
   text-align: center;
   width: 400px;
   margin: 0 auto;
+}
+
+.profile {
+  border: 6px solid white;
+  border-radius: 100%;
+  height: 300px;
+  width: 300px;
+  margin: 20px auto;
+}
+
+#profile-buttons {
+  padding-top: 100px;
+}
+
+#profile-h3 {
+  font-family: 'Comfortaa', cursive;
+  color:#0DAA99;
+  text-align: center;
+  font-size: 40px;
+}
+
+#browse-bg {
+  background: rgba(8,168,150,1);
+  background: -moz-linear-gradient(top, rgba(8,168,150,1) 0%, rgba(255,255,255,0.89) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(8,168,150,1)), color-stop(100%, rgba(255,255,255,0.89)));
+  background: -webkit-linear-gradient(top, rgba(8,168,150,1) 0%, rgba(255,255,255,0.89) 100%);
+  background: -o-linear-gradient(top, rgba(8,168,150,1) 0%, rgba(255,255,255,0.89) 100%);
+  background: -ms-linear-gradient(top, rgba(8,168,150,1) 0%, rgba(255,255,255,0.89) 100%);
+  background: linear-gradient(to bottom, rgba(8,168,150,1) 0%, rgba(255,255,255,0.89) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#08a896', endColorstr='#ffffff', GradientType=0 );
+  width: 100%;
+  height: 650px;
+}
+
+.browse-title {
+  color: white;
 }
 
 @media (max-width: 1030px) {

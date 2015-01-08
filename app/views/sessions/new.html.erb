@@ -1,14 +1,18 @@
-<h1> Log in page, welcome </h1>
+<div class="large-12 columns">
+  <div class="fill-in-form">
+    <h1> Log in </h1>
 
-<%= render 'common/flash' %>
+    <%= render 'common/flash' %>
 
-<%= form_for :session, url: sessions_path do |f| %>
-  <%= f.label :email %>
-  <%= f.text_field :email %>
+    <%= form_for :session, url: sessions_path do |f| %>
+      <%= f.label :email %>
+      <%= f.text_field :email %>
 
-  <%= f.label :password %>
-  <%=f.password_field :password %>
+      <%= f.label :password %>
+      <%=f.password_field :password %>
 
-  <%= f.submit "Welcome Back!", id: "signin" %>
+      <%= f.submit "Welcome Back", id: "signin", class: "button" %>
 
-<% end %>
+    <% end %>
+  </div>
+</div>

@@ -5,7 +5,7 @@
         <div class="hide-for-small panel">
           <%= form_tag(search_browse_index_path, method: "get") do %>
           <%= label_tag(:q, "Search everyone's shelves!") %>
-          <%= text_field_tag(:q), :class => "search" %>
+          <%= text_field_tag(:q) %>
           <%= submit_tag("Search shelves") %>
           <% end %>
           <br>
