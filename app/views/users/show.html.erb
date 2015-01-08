@@ -1,16 +1,17 @@
-<div class="large-12 columns">
-  <div class="row">
-    <div class="large-4 small-12 columns">
-      <img src="http://www.imran.com/xyper_images/icon-user-default.png" class="profile">
-      <h3 id="profile-h3"><%= @user.name %></h3>
-    </div><!-- end large 4 -->
-    <div class="large-8 small-12 columns" id="profile-buttons">
-      <%= link_to 'View My Shelf', books_path, class: "button expand" %>
-      <%= link_to 'ProfileSettings', edit_user_path, class: "button expand" %>
-      <%= link_to 'Browse Libraries', browse_index_path, class: "button expand" %>
-      <br>
-    </div><!-- end large 8 -->
-  </div><!-- end row -->
-</div><!-- end large-12 -->
-
+<div id="browse-bg">
+  <div class="large-12 columns">
+    <div class="row">
+      <div class="large-4 small-12 columns">
+        <img src="http://www.imran.com/xyper_images/icon-user-default.png" class="profile">
+        <h3 id="profile-h3"><%= @user.name %></h3>
+      </div><!-- end large 4 -->
+      <div class="large-8 small-12 columns" id="profile-buttons">
+        <%= link_to 'View My Shelf', books_path, class: "button expand" %>
+        <%= link_to 'ProfileSettings', edit_user_path, class: "button expand" %>
+        <%= link_to 'Browse Libraries', browse_index_path, class: "button expand" %>
+        <br>
+      </div><!-- end large 8 -->
+    </div><!-- end row -->
+  </div><!-- end large-12 -->
+</div>
 

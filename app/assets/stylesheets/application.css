@@ -165,6 +165,11 @@
   font-size: 40px;
 }
 
+#profile-shelf {
+    padding-top: 60px;
+
+}
+
 #browse-bg {
   background: rgba(8,168,150,1);
   background: -moz-linear-gradient(top, rgba(8,168,150,1) 0%, rgba(255,255,255,0.89) 100%);
