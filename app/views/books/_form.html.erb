@@ -21,6 +21,6 @@
   </div>
     <%= f.hidden_field :user_id, :value => current_user.id %>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Create Book', id: 'submit', class: "button expand" %>
   </div>
 <% end %>
