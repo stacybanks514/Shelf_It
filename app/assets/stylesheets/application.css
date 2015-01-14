@@ -237,9 +237,7 @@
   background-color: white;
 }
 
-.top-bar {
-  background-color: grey;
-}
+
 .name {
   color: purple;
 }
@@ -247,21 +245,50 @@
 .navigation-ul {
   list-style-type: none;
   margin: 0px auto;
+  padding-top: 20px;
 }
 
 .navigation-btn {
   display: inline;
-  margin: 30px 20px;
-  padding-top: 50px 0;
   font-family: 'Comfortaa', Trebuchet MS;
   font-size: 20px;
+  color: white;
+
+}
+
+.navigation-btn.view {
+  color: #CCEDE9;
+}
+
+.navigation-btn.me {
+  color: #CCEDE9;
+}
+
+.navigation-btn.in {
+  padding: 0 20px;
+  margin: 0 20px;
 }
 
 .shelfit {
-  color: pruple;
+  color: red;
   font-family: 'Poiret One', 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
   font-size: 40px;
+  margin-left: 100px;
+}
+@media (max-width: 700px) {
+  .shelfit {
+    margin-left: 10px;
+  }
 }
 
+.top-bar-section {
+  padding-top: 7px;
+  margin-right: 150px;
+}
+
+.button.tiny {
+  font-family: 'Poiret One', 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+  font-weight: bold;
+}
 
 
