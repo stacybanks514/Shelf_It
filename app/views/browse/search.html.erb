@@ -6,7 +6,7 @@
           <h3 class="browse-title">Browse all shelves </h3>
             <%= form_tag(search_browse_index_path, method: "get") do %>
             <%= text_field_tag(:q) %>
-            <button class="button expand"><%= submit_tag("Search Shelves") %></button>
+            <%= submit_tag "Search Shelves", :class => "button expand" %>
             <% end %>
             <%= link_to 'Welcome Page', root_path, class: "button expand" %>
             <%= link_to 'Browse Page', browse_index_path, class: "button expand" %>
