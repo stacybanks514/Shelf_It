@@ -1,6 +1,5 @@
 <div class="large-12 columns">
   <div class="fill-in-form">
-    <h1> Book </h1>
     <p id="notice"><%= notice %></p>
 
     <p>
@@ -17,8 +16,8 @@
       <%= image_tag @book.book_cover_url %>
     </p>
 
-    <%= link_to 'Edit', edit_book_path(@book) %> |
-    <%= link_to 'Back', books_path %>
+    <%= link_to 'Edit', edit_book_path(@book), class: "button expand"  %>
+    <%= link_to 'Back', books_path, class: "button expand"  %>
 
   </div>
 </div>
