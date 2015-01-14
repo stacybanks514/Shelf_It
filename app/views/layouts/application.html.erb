@@ -4,8 +4,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%= content_for?(:title) ? yield(:title) : "Shelf It!" %></title>
-    <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
@@ -15,7 +16,7 @@
     <nav class="top-bar" data-topbar role="navigation" data-options="sticky_on: large">
       <ul class="title-area">
         <li class="name">
-          <h1><a href class="home"><%= link_to 'Shelf It', root_path%></a></h1>
+          <h1 class="shelfit"><a href class="shelfit"><%= link_to 'Shelf It', root_path, class: "shelfit"%></a></h1>
         </li>
          <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
         <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
@@ -24,12 +25,14 @@
         <!-- Right Nav Section -->
         <ul class="right">
           <ul class="login">
-
               <%= render 'common/signout' %>
           </ul>
         </ul>
       </section>
     </nav>
+
+
+
     <%= yield %>
     <%= javascript_include_tag "application" %>
   </body>

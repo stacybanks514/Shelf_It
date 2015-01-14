@@ -232,3 +232,36 @@
   border-color: #333333;
   margin-top: -30px;
 }
+
+.navigation-btn-div {
+  background-color: white;
+}
+
+.top-bar {
+  background-color: grey;
+}
+.name {
+  color: purple;
+}
+
+.navigation-ul {
+  list-style-type: none;
+  margin: 0px auto;
+}
+
+.navigation-btn {
+  display: inline;
+  margin: 30px 20px;
+  padding-top: 50px 0;
+  font-family: 'Comfortaa', Trebuchet MS;
+  font-size: 20px;
+}
+
+.shelfit {
+  color: pruple;
+  font-family: 'Poiret One', 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+  font-size: 40px;
+}
+
+
+
