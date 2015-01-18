@@ -1,7 +1,7 @@
 <% if signed_in? %>
     <%= form_for :session, url: signout_path, method: 'delete' do |f| %>
       <span class="navigation-btn">Signed in as </span> <%= link_to current_user.name, current_user, class: "navigation-btn me" %>, <%= link_to 'View My Shelf', books_path, class: "navigation-btn view" %>
-    <%= f.submit 'Sign Out', class: "button tiny" %>
+    <%= f.submit 'Sign Out', class: "button tiny signout" %>
     <% end %> 
   <% else %>
       <%= link_to 'Log In', new_session_path, class: "navigation-btn in" %>

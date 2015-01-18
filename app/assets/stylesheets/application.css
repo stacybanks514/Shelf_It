@@ -323,3 +323,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45ffffff', e
   font-weight: bold;
 }
 
+.button.tiny.signout {
+  top: -3px;
+  margin-left: 15px;
+}
